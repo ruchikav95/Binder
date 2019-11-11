@@ -1,7 +1,7 @@
 {
-  "name": "mern",
+  "name": "Binder",
   "version": "1.0.0",
-  "description": "Mern Demo",
+  "description": "Book sharing templates",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
@@ -19,7 +19,10 @@
     "nodemon": "^1.18.7"
   },
   "dependencies": {
+    "@material-ui/core": "^4.5.1",
+    "antd": "^3.25.1",
     "express": "^4.16.3",
-    "if-env": "^1.0.4"
+    "if-env": "^1.0.4",
+    "mysql2": "^2.0.0"
   }
 }
