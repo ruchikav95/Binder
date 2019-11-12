@@ -1,0 +1,7 @@
+{
+
+    "production": {
+      "use_env_variable": "JAWSDB_MARIA_URL",
+      "dialect": "mysql"
+    }
+  }
