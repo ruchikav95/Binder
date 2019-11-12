@@ -1,0 +1,17 @@
+.navbar-brand {
+  font-size: 4rem;
+  display: inline-flex;
+  margin: 0 0 1.7rem 1.7rem;
+  letter-spacing: 0rem;
+  text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white,
+    2px 2px 0 white;
+}
+
+#navbarNav {
+  display: block;
+  font-size: 0.8rem;
+  color: #70554a;
+  margin: 0 0 1.7rem 0;
+  text-shadow: -1px -1px 0 #353535, 1px -1px 0 #353535, -1px 1px 0 #353535,
+    1px 1px 0 #353535;
+}
