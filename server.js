@@ -3,6 +3,8 @@ var session = require("express-session");
 var passport = require("./config/passport");
 // Setting up port and requiring models for syncing
 var db = require("./models");
+// Using GraphQL in
+const expressGraphQL = require("express-graphql");
 
 const express = require("express");
 const path = require("path");
@@ -37,9 +39,17 @@ require("./routes/items-api-routes.js")(app);
 // });
 
 
+
+
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function() {
+  app.use("/graphql", expressGraphQL({
+    graphiql: true,
+    schema: schema
+  }));
+
   app.listen(PORT, () => {
-    console.log(`🌎 ==> API server now on port ${PORT}!`);
+    console.log(`🌎 ==> Server now on running on http://localhost:${PORT}`);
+    console.log(`🌎 ==> GraphiQL now on running on http://localhost:${PORT}/graphql`);
   });
 });
