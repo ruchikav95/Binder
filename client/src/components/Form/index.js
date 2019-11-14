@@ -1,67 +1,142 @@
-import React from "react";
-import "antd/dist/antd.css";
-import "./index.css";
-import { Form, Icon, Input, Button, Checkbox } from "antd";
-
-class NormalLoginForm extends React.Component {
-  handleSubmit = e => {
-    e.preventDefault();
-    this.props.form.validateFields((err, values) => {
-      if (!err) {
-        console.log("Received values of form: ", values);
-      }
-    });
-  };
-
-  render() {
-    const { getFieldDecorator } = this.props.form;
-    return (
-      <Form onSubmit={this.handleSubmit} className="login-form">
-        <Form.Item>
-          {getFieldDecorator("username", {
-            rules: [{ required: true, message: "Please input your username!" }]
-          })(
-            <Input
-              prefix={<Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />}
-              placeholder="Username"
-            />
-          )}
-        </Form.Item>
-        <Form.Item>
-          {getFieldDecorator("password", {
-            rules: [{ required: true, message: "Please input your Password!" }]
-          })(
-            <Input
-              prefix={<Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />}
-              type="password"
-              placeholder="Password"
-            />
-          )}
-        </Form.Item>
-        <Form.Item>
-          {getFieldDecorator("remember", {
-            valuePropName: "checked",
-            initialValue: true
-          })(<Checkbox>Remember me</Checkbox>)}
-          <a className="login-form-forgot" href="">
-            Forgot password
-          </a>
-          <Button
-            type="primary"
-            htmlType="submit"
-            className="login-form-button"
-          >
-            Log in
-          </Button>
-          Or <a href="">register now!</a>
-        </Form.Item>
-      </Form>
-    );
-  }
+import React from 'react';
+import ReactDOM from 'react-dom';
+import 'antd/dist/antd.css';
+import './index.css';
+import {
+ Form,
+ Input,
+ Select,
+ Button,
+ AutoComplete,
+} from 'antd';
+const { Option } = Select;
+const AutoCompleteOption = AutoComplete.Option;
+class RegistrationForm extends React.Component {
+ state = {
+   confirmDirty: false,
+   autoCompleteResult: [],
+ };
+ handleSubmit = e => {
+   e.preventDefault();
+   this.props.form.validateFieldsAndScroll((err, values) => {
+     if (!err) {
+       console.log('Received values of form: ', values);
+     }
+   });
+ };
+ handleConfirmBlur = e => {
+   const { value } = e.target;
+   this.setState({ confirmDirty: this.state.confirmDirty || !!value });
+ };
+ compareToFirstPassword = (rule, value, callback) => {
+   const { form } = this.props;
+   if (value && value !== form.getFieldValue('password')) {
+     callback('Two passwords that you enter is inconsistent!');
+   } else {
+     callback();
+   }
+ };
+ validateToNextPassword = (rule, value, callback) => {
+   const { form } = this.props;
+   if (value && this.state.confirmDirty) {
+     form.validateFields(['confirm'], { force: true });
+   }
+   callback();
+ };
+ handleWebsiteChange = value => {
+   let autoCompleteResult;
+   if (!value) {
+     autoCompleteResult = [];
+   } else {
+     autoCompleteResult = ['.com', '.org', '.net'].map(domain => ${value}${domain});
+   }
+   this.setState({ autoCompleteResult });
+ };
+ render() {
+   const { getFieldDecorator } = this.props.form;
+   const { autoCompleteResult } = this.state;
+   const formItemLayout = {
+     labelCol: {
+       xs: { span: 24 },
+       sm: { span: 8 },
+     },
+     wrapperCol: {
+       xs: { span: 24 },
+       sm: { span: 16 },
+     },
+   };
+   const tailFormItemLayout = {
+     wrapperCol: {
+       xs: {
+         span: 24,
+         offset: 0,
+       },
+       sm: {
+         span: 16,
+         offset: 8,
+       },
+     },
+   };
+   const prefixSelector = getFieldDecorator('prefix', {
+     initialValue: '86',
+   })(
+     <Select style={{ width: 70 }}>
+       <Option value="86">+86</Option>
+       <Option value="87">+87</Option>
+     </Select>,
+   );
+   return (
+     <Form {...formItemLayout} onSubmit={this.handleSubmit} style={{ marginTop: 200 }}>
+       <Form.Item label="E-mail">
+         {getFieldDecorator('email', {
+           rules: [
+             {
+               type: 'email',
+               message: 'The input is not valid E-mail!',
+             },
+             {
+               required: true,
+               message: 'Please input your E-mail!',
+             },
+           ],
+         })(<Input />)}
+       </Form.Item>
+       <Form.Item label="Password" hasFeedback>
+         {getFieldDecorator('password', {
+           rules: [
+             {
+               required: true,
+               message: 'Please input your password!',
+             },
+             {
+               validator: this.validateToNextPassword,
+             },
+           ],
+         })(<Input.Password />)}
+       </Form.Item>
+       <Form.Item label="Confirm Password" hasFeedback>
+         {getFieldDecorator('confirm', {
+           rules: [
+             {
+               required: true,
+               message: 'Please confirm your password!',
+             },
+             {
+               validator: this.compareToFirstPassword,
+             },
+           ],
+         })(<Input.Password onBlur={this.handleConfirmBlur} />)}
+       </Form.Item>
+       <Form.Item {...tailFormItemLayout}>
+         <Button type="primary" htmlType="submit">
+           Sign Up
+         </Button>
+       </Form.Item>
+     </Form>
+   );
+ }
 }
-
-const WrappedNormalLoginForm = Form.create({ name: "normal_login" })(
-  NormalLoginForm
+const WrappedRegistrationForm = Form.create({ name: "normal_login" })(
+ RegistrationForm
 );
-
-export default WrappedNormalLoginForm;
+export default WrappedRegistrationForm;
