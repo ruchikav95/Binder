@@ -112,7 +112,7 @@ class RegistrationForm extends React.Component {
         sm: { span: 8 },
       },
       wrapperCol: {
-        xs: { span: 20 },
+        xs: { span: 24 },
         sm: { span: 16 },
 
       },
