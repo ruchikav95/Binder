@@ -1,0 +1,17 @@
+.fb-body-footer{
+	width:100%;
+	position:absolute;
+	left:0px;
+	height:80px;
+	background:white;
+	top:700px;
+	
+	
+}
+#fb-body-footer-base{
+	width:900px;
+	top:15px;
+	left:200px;
+	color:blue;
+	height:60px;
+}

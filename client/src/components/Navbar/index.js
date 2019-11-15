@@ -7,7 +7,7 @@ function Navbar() {
       <div class="fb-header-base">
       </div>
       <div class="fb-header">
-        <div id="img1" class="fb-header"><img src="facebook.png" /></div>
+        <div id="img1" class="fb-header"><img /></div>
         <div id="form1" class="fb-header">Email or Phone<br />
           <input placeholder="Email" type="mail" name="name" /><br />
           <input type="checkbox" />keep me logged in</div>

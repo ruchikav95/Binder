@@ -12,7 +12,7 @@
 	width:100%;
 	height:90px;
 	position:absolute;
-	background:#3d5b99;
+	background:rgb(17, 122, 136);
 	top:0;
 	left:0;
 	color:white;
@@ -21,10 +21,10 @@
 	
 }
 #img1{
-	left:178px;
-	height:50px;
-	width:100px;
-	top:25px;
+	
+	
+	
+	background: url(../../assets/binderLogo.png)
 }
 #form1{
 	left:750px;
@@ -53,3 +53,15 @@
 	width:50px;
 	cursor:pointer;
 }
+
+.submit1{
+	left:1130px;
+	top:35px;
+	background:#5b7bc0;
+	color:white;
+	position:fixed;
+	z-index:20;
+	height:22px;
+	width:50px;
+	cursor:pointer;
+	}

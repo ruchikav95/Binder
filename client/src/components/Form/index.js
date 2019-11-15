@@ -81,25 +81,17 @@ class RegistrationForm extends React.Component {
     const tailFormItemLayout = {
       wrapperCol: {
         xs: {
-          span: 24,
+          span: 10,
           offset: 0,
         },
         sm: {
-          span: 16,
+          span: 10,
           offset: 8,
         },
       },
     };
-    const prefixSelector = getFieldDecorator('prefix', {
-      initialValue: '86',
-    })(
-      <Select style={{ width: 70 }}>
-        <Option value="86">+86</Option>
-        <Option value="87">+87</Option>
-      </Select>,
-    );
     return (
-      <Form {...formItemLayout} onSubmit={this.handleSubmit} style={{ marginTop: 200 }}>
+      <Form {...formItemLayout} onSubmit={this.handleSubmit} style={{ marginTop: 300 }}>
         <Form.Item label="E-mail">
           {getFieldDecorator('email', {
             rules: [
@@ -112,7 +104,7 @@ class RegistrationForm extends React.Component {
                 message: 'Please input your E-mail!',
               },
             ],
-          })(<Input />)}
+          })(<Input style={{ width: 160 }} />)}
         </Form.Item>
         <Form.Item label="Password" hasFeedback>
           {getFieldDecorator('password', {
@@ -125,21 +117,9 @@ class RegistrationForm extends React.Component {
                 validator: this.validateToNextPassword,
               },
             ],
-          })(<Input.Password />)}
+          })(<Input.Password style={{ width: 160 }} />)}
         </Form.Item>
-        <Form.Item label="Confirm Password" hasFeedback>
-          {getFieldDecorator('confirm', {
-            rules: [
-              {
-                required: true,
-                message: 'Please confirm your password!',
-              },
-              {
-                validator: this.compareToFirstPassword,
-              },
-            ],
-          })(<Input.Password onBlur={this.handleConfirmBlur} />)}
-        </Form.Item>
+
 
         <Form.Item {...tailFormItemLayout}>
           <Button type="primary" htmlType="submit">
