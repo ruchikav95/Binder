@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Modal } from 'antd';
+// @ts-ignore
 import { i18n } from 'i18n';
 import BookshelvesForm from 'view/bookshelves/form/BookshelvesForm';
 import BookshelvesService from 'modules/bookshelves/bookshelvesService';
