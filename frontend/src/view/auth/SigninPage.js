@@ -3,6 +3,7 @@ import { Formik } from 'formik';
 import actions from 'modules/auth/authActions';
 import model from 'modules/auth/userModel';
 import selectors from 'modules/auth/authSelectors';
+// @ts-ignore
 import { i18n } from 'i18n';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -63,7 +64,7 @@ class SigninPage extends Component {
       <SigninPageWrapper>
         <Content>
           <Logo>
-            <h1>{i18n('app.title')}</h1>
+            <h1>Binder</h1>
           </Logo>
 
           <Formik
@@ -101,12 +102,12 @@ class SigninPage extends Component {
                     {fields.rememberMe.label}
                   </Checkbox>
 
-                  <Link
+                  {/* <Link
                     style={{ float: 'right' }}
                     to="/auth/forgot-password"
                   >
                     {i18n('auth.forgotPassword')}
-                  </Link>
+                  </Link> */}
                 </Form.Item>
 
                 <Button
