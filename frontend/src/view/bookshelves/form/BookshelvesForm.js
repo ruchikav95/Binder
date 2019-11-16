@@ -1,5 +1,6 @@
 import { Button, Form } from 'antd';
 import { Formik } from 'formik';
+// @ts-ignore
 import { i18n } from 'i18n';
 import model from 'modules/bookshelves/bookshelvesModel';
 import React, { Component } from 'react';

@@ -3,6 +3,7 @@ import ContentWrapper from 'view/layout/styles/ContentWrapper';
 import PageTitle from 'view/shared/styles/PageTitle';
 import Breadcrumb from 'view/shared/Breadcrumb';
 import BookshelvesForm from 'view/bookshelves/form/BookshelvesForm';
+// @ts-ignore
 import { i18n } from 'i18n';
 import { getHistory } from 'modules/store';
 import actions from 'modules/bookshelves/form/bookshelvesFormActions';
@@ -52,7 +53,10 @@ class BookshelvesFormPage extends Component {
         <Breadcrumb
           items={[
             [i18n('home.menu'), '/'],
-            [i18n('entities.bookshelves.menu'), '/bookshelves'],
+            [
+              i18n('entities.bookshelves.menu'),
+              '/bookshelves',
+            ],
             [this.title()],
           ]}
         />
@@ -67,7 +71,9 @@ class BookshelvesFormPage extends Component {
               record={this.props.record}
               isEditing={this.isEditing()}
               onSubmit={this.doSubmit}
-              onCancel={() => getHistory().push('/bookshelves')}
+              onCancel={() =>
+                getHistory().push('/bookshelves')
+              }
             />
           )}
         </ContentWrapper>
