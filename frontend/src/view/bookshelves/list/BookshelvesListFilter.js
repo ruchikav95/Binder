@@ -1,5 +1,7 @@
+
 import { Button, Col, Form, Row } from 'antd';
 import { Formik } from 'formik';
+// @ts-ignore
 import { i18n } from 'i18n';
 import actions from 'modules/bookshelves/list/bookshelvesListActions';
 import selectors from 'modules/bookshelves/list/bookshelvesListSelectors';
@@ -12,7 +14,7 @@ import FilterWrapper, {
 } from 'view/shared/styles/FilterWrapper';
 import FormFilterSchema from 'view/shared/form/formFilterSchema';
 import InputFormItem from 'view/shared/form/items/InputFormItem';
-import DatePickerRangeFormItem from 'view/shared/form/items/DatePickerRangeFormItem';
+// import DatePickerRangeFormItem from 'view/shared/form/items/DatePickerRangeFormItem';
 
 
 const { fields } = model;
