@@ -10,6 +10,8 @@ const path = require('path');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
+const expressGraphQL = require("express-graphql");
+const schema = require("./graphql");
 
 // Enables CORS
 app.use(cors({ origin: true }));
@@ -29,6 +31,12 @@ app.use(helmet());
 // Parses the body of POST/PUT request
 // to JSON
 app.use(bodyParser.json());
+
+//Enabling GraphQL
+app.use("/graphql", expressGraphQL({
+  graphiql: true,
+  schema: schema
+}));
 
 // Configure the Entity routes
 const routes = express.Router();
