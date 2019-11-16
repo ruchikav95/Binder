@@ -10,7 +10,7 @@
     "enzyme-adapter-react-16": "1.10.0",
     "file-saver": "2.0.1",
     "filesize": "4.1.2",
-    "axios": "0.18.0",
+    "axios": "0.18.1",
     "formik": "1.5.1",
     "history": "4.7.2",
     "lodash": "4.17.11",
