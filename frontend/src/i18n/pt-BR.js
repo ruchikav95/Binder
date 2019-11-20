@@ -128,56 +128,6 @@ const ptBR = {
           'Arquivos/Imagens devem ser as URLs dos arquivos, separados por espaço. Relacionamentos devem ser os IDs separados por espaço.',
       },
     },
-
-    bookshelves: {
-      name: 'Bookshelves',
-      label: 'Bookshelves',
-      menu: 'Bookshelves',
-      exporterFileName: 'Bookshelves_exportados',
-      list: {
-        menu: 'Bookshelves',
-        title: 'Bookshelves',
-      },
-      create: {
-        success: 'Bookshelves salvo com sucesso',
-      },
-      update: {
-        success: 'Bookshelves salvo com sucesso',
-      },
-      destroy: {
-        success: 'Bookshelves deletado com sucesso',
-      },
-      destroyAll: {
-        success: 'Bookshelves(s) deletado com sucesso',
-      },
-      edit: {
-        title: 'Editar Bookshelves',
-      },
-      fields: {
-        id: 'Id',
-        'bsBookName': 'BsBookName',
-        'bsSubjec': 'BsSubjec',
-        'bsBookOwner': 'BsBookOwner',
-        createdAt: 'Criado em',
-        updatedAt: 'Atualizado em',
-        createdAtRange: 'Criado em',
-      },
-      enumerators: {
-
-      },
-      new: {
-        title: 'Novo Bookshelves',
-      },
-      view: {
-        title: 'Visualizar Bookshelves',
-      },
-      importer: {
-        title: 'Importar Bookshelves',
-        fileName: 'bookshelves_template_importacao',
-        hint:
-          'Arquivos/Imagens devem ser as URLs dos arquivos, separados por espaço. Relacionamentos devem ser os IDs separados por espaço.',
-      },
-    },
   },
 
   auth: {
@@ -267,14 +217,6 @@ const ptBR = {
     bookViewer: {
       label: 'Visualizador de Books',
       description: 'Acesso de visualização aos Books',
-    },
-    bookshelvesEditor: {
-      label: 'Editor de Bookshelves',
-      description: 'Acesso de edição aos Bookshelves',
-    },
-    bookshelvesViewer: {
-      label: 'Visualizador de Bookshelves',
-      description: 'Acesso de visualização aos Bookshelves',
     },
   },
 

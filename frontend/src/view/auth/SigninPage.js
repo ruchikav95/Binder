@@ -11,7 +11,7 @@ import Content from 'view/auth/styles/Content';
 import Logo from 'view/auth/styles/Logo';
 import OtherActions from 'view/auth/styles/OtherActions';
 import SigninPageWrapper from 'view/auth/styles/SigninPageWrapper';
-import I18nFlags from 'view/layout/I18nFlags';
+// import I18nFlags from 'view/layout/I18nFlags';
 import InputFormItem, {
   InputFormItemNotFast,
 } from 'view/shared/form/items/InputFormItem';
@@ -63,7 +63,9 @@ class SigninPage extends Component {
       <SigninPageWrapper>
         <Content>
           <Logo>
-            <h1>{i18n('app.title')}</h1>
+            {/* <h1>{i18n('app.title')}</h1> */}
+            <h1>{i18n('Binder')}</h1>
+            <h2>{i18n('Sign-in')}</h2>
           </Logo>
 
           <Formik
@@ -125,7 +127,7 @@ class SigninPage extends Component {
                   </Link>
                 </OtherActions>
 
-                <I18nFlags style={{ marginTop: '24px' }} />
+                {/* <I18nFlags style={{ marginTop: '24px' }} /> */}
               </Form>
             )}
           />
