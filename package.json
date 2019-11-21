@@ -2,12 +2,12 @@
   "name": "app-backend",
   "description": "Backend",
   "scripts": {
-    "start": " NODE_ENV=localhost node ./server.js",
-    "start:production": "cd ./backend && npm run start:production",
-    "test": "node --exec ' NODE_ENV=test mocha ./src/**/*.test.js --exit || exit 1'",
-    "db:reset:localhost": " MIGRATION_ENV=localhost node ./migrations/reset",
-    "db:reset:production": " MIGRATION_ENV=production node ./migrations/reset",
-    "build:production": "cd ./frontend && npm install && npm run build:production && rm -rf ./node_modules && cd ../backend && npm install"
+    "start": "cross-env NODE_ENV=localhost nodemon ./server.js",
+    "start:production": "cross-env NODE_ENV=production nodemon ./server.js",
+    "test": "nodemon --exec 'cross-env NODE_ENV=test mocha ./src/**/*.test.js --exit || exit 1'",
+    "db:reset:localhost": "cross-env MIGRATION_ENV=localhost node ./migrations/reset",
+    "db:reset:production": "cross-env MIGRATION_ENV=production node ./migrations/reset"
+
   },
   "dependencies": {
     "cors": "2.8.5",
@@ -28,11 +28,14 @@
   "engines": {
     "node": "8"
   },
+
+
   "private": true,
   "devDependencies": {
     "mocha": "6.2.2",
     "node-mocks-http": "1.8.0",
     "nodemon": "1.19.4",
     "sequelize-cli": "^5.5.1"
+
   }
 }

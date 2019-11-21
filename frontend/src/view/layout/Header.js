@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import HeaderWrapper from 'view/layout/styles/HeaderWrapper';
 import layoutSelectors from 'modules/layout/layoutSelectors';
 import { i18n } from 'i18n';
-import I18nSelect from 'view/layout/I18nSelect';
+//import I18nSelect from 'view/layout/I18nSelect';
 import { getHistory } from 'modules/store';
 
 const { Header: AntHeader } = Layout;

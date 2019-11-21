@@ -20,10 +20,11 @@ module.exports = {
    * MySQL configuration for Sequelize.
    * More info: https://sequelize.org/v5/manual/getting-started.html#setting-up-a-connection
    */
-   database: {
+
+  database: {
     username: 'root',
     dialect: 'mysql',
-    password: 'Itapeva1998',
+    password: 'Rugiya2468642',
     database: 'binderDb2',
     host: 'localhost',
     logging: console.log,
