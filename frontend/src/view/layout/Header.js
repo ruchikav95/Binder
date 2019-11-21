@@ -58,9 +58,9 @@ class Header extends Component {
             onClick={this.doToggleMenu}
           />
           <div>
-            <span className="i18n-select">
+            {/* <span className="i18n-select">
               <I18nSelect />
-            </span>
+            </span> */}
 
             <Dropdown
               className="user-dropdown"

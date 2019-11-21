@@ -1,8 +1,38 @@
 {
-  "name": "app",
-  "version": "0.0.0",
+  "name": "app-backend",
+  "description": "Backend",
   "scripts": {
-    "build:production": "cd ./frontend && npm install && npm run build:production && rm -rf ./node_modules && cd ../backend && npm install",
-    "start:production": "cd ./backend && npm run start:production"
+    "start": " NODE_ENV=localhost node ./server.js",
+    "start:production": "cd ./backend && npm run start:production",
+    "test": "node --exec ' NODE_ENV=test mocha ./src/**/*.test.js --exit || exit 1'",
+    "db:reset:localhost": " MIGRATION_ENV=localhost node ./migrations/reset",
+    "db:reset:production": " MIGRATION_ENV=production node ./migrations/reset",
+    "build:production": "cd ./frontend && npm install && npm run build:production && rm -rf ./node_modules && cd ../backend && npm install"
+  },
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "lodash": "4.17.15",
+    "moment": "2.24.0",
+    "nodemailer": "6.3.1",
+    "mysql2": "2.0.0",
+    "pg": "7.12.1",
+    "pg-hstore": "2.3.3",
+    "sequelize": "5.21.2",
+    "sqlite": "3.0.3",
+    "jsonwebtoken": "8.5.1",
+    "bcrypt": "3.0.6",
+    "formidable": "1.2.1",
+    "helmet": "3.21.2"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "private": true,
+  "devDependencies": {
+    "mocha": "6.2.2",
+    "node-mocks-http": "1.8.0",
+    "nodemon": "1.19.4",
+    "sequelize-cli": "^5.5.1"
   }
 }

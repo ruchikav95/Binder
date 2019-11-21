@@ -1,6 +1,0 @@
-node_modules/
-/service-accounts/*.json
-/data
-
-# misc
-.env
