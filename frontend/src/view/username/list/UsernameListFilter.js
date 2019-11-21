@@ -12,6 +12,7 @@ import FilterWrapper, {
 } from 'view/shared/styles/FilterWrapper';
 import FormFilterSchema from 'view/shared/form/formFilterSchema';
 import InputFormItem from 'view/shared/form/items/InputFormItem';
+// import DatePickerRangeFormItem from 'view/shared/form/items/DatePickerRangeFormItem';
 import InputNumberRangeFormItem from 'view/shared/form/items/InputNumberRangeFormItem';
 
 const { fields } = model;
@@ -84,8 +85,12 @@ class UsernameListFilter extends Component {
                   </Col>
                   <Col md={24} lg={12}>
                     <InputNumberRangeFormItem
-                      name={fields.pointsRange.name}
-                      label={fields.pointsRange.label}
+                      name={
+                        fields.pointsRange.name
+                      }
+                      label={
+                        fields.pointsRange.label
+                      }
                       layout={formItemLayout}
                     />
                   </Col>
@@ -124,6 +129,4 @@ function select(state) {
   };
 }
 
-export default withRouter(
-  connect(select)(UsernameListFilter),
-);
+export default withRouter(connect(select)(UsernameListFilter));

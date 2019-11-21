@@ -1,6 +1,9 @@
-import Roles from 'security/roles';
+const Roles = require('./roles');
 const roles = Roles.values;
 
+/**
+ * List of Permissions and the Roles allowed of using them.
+ */
 class Permissions {
   static get values() {
     return {
@@ -192,4 +195,4 @@ class Permissions {
   }
 }
 
-export default Permissions;
+module.exports = Permissions;

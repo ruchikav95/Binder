@@ -15,8 +15,6 @@ class Roles {
       usernameViewer: 'usernameViewer',
       bookEditor: 'bookEditor',
       bookViewer: 'bookViewer',
-      bookshelvesEditor: 'bookshelvesEditor',
-      bookshelvesViewer: 'bookshelvesViewer',
     };
   }
 

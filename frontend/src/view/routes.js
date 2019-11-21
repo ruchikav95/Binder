@@ -157,45 +157,6 @@ const privateRoutes = [
     permissionRequired: permissions.bookRead,
     exact: true,
   },
-
-  {
-    path: '/bookshelves',
-    loader: () => import('view/bookshelves/list/BookshelvesListPage'),
-    permissionRequired: permissions.bookshelvesRead,
-    exact: true,
-    icon: 'right',
-    label: i18n('entities.bookshelves.menu'),
-    menu: true,
-  },
-  {
-    path: '/bookshelves/new',
-    loader: () => import('view/bookshelves/form/BookshelvesFormPage'),
-    menu: false,
-    permissionRequired: permissions.bookshelvesCreate,
-    exact: true,
-  },
-  {
-    path: '/bookshelves/importer',
-    loader: () =>
-      import('view/bookshelves/importer/BookshelvesImporterPage'),
-    menu: false,
-    permissionRequired: permissions.bookshelvesImport,
-    exact: true,
-  },
-  {
-    path: '/bookshelves/:id/edit',
-    loader: () => import('view/bookshelves/form/BookshelvesFormPage'),
-    menu: false,
-    permissionRequired: permissions.bookshelvesEdit,
-    exact: true,
-  },
-  {
-    path: '/bookshelves/:id',
-    loader: () => import('view/bookshelves/view/BookshelvesViewPage'),
-    menu: false,
-    permissionRequired: permissions.bookshelvesRead,
-    exact: true,
-  },
 ];
 
 const publicRoutes = [

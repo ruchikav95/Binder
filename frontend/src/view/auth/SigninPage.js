@@ -3,7 +3,6 @@ import { Formik } from 'formik';
 import actions from 'modules/auth/authActions';
 import model from 'modules/auth/userModel';
 import selectors from 'modules/auth/authSelectors';
-// @ts-ignore
 import { i18n } from 'i18n';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -12,7 +11,7 @@ import Content from 'view/auth/styles/Content';
 import Logo from 'view/auth/styles/Logo';
 import OtherActions from 'view/auth/styles/OtherActions';
 import SigninPageWrapper from 'view/auth/styles/SigninPageWrapper';
-import I18nFlags from 'view/layout/I18nFlags';
+// import I18nFlags from 'view/layout/I18nFlags';
 import InputFormItem, {
   InputFormItemNotFast,
 } from 'view/shared/form/items/InputFormItem';
@@ -64,7 +63,9 @@ class SigninPage extends Component {
       <SigninPageWrapper>
         <Content>
           <Logo>
-            <h1>Binder</h1>
+            {/* <h1>{i18n('app.title')}</h1> */}
+            <h1>{i18n('Binder')}</h1>
+            <h2>{i18n('Sign-in')}</h2>
           </Logo>
 
           <Formik
@@ -102,12 +103,12 @@ class SigninPage extends Component {
                     {fields.rememberMe.label}
                   </Checkbox>
 
-                  {/* <Link
+                  <Link
                     style={{ float: 'right' }}
                     to="/auth/forgot-password"
                   >
                     {i18n('auth.forgotPassword')}
-                  </Link> */}
+                  </Link>
                 </Form.Item>
 
                 <Button
@@ -126,7 +127,7 @@ class SigninPage extends Component {
                   </Link>
                 </OtherActions>
 
-                <I18nFlags style={{ marginTop: '24px' }} />
+                {/* <I18nFlags style={{ marginTop: '24px' }} /> */}
               </Form>
             )}
           />

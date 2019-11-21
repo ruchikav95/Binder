@@ -128,56 +128,6 @@ const en = {
           'Files/Images columns must be the URLs of the files separated by space.',
       },
     },
-
-    bookshelves: {
-      name: 'bookshelves',
-      label: 'Bookshelves',
-      menu: 'Bookshelves',
-      exporterFileName: 'bookshelves_export',
-      list: {
-        menu: 'Bookshelves',
-        title: 'Bookshelves',
-      },
-      create: {
-        success: 'Bookshelves saved successfully',
-      },
-      update: {
-        success: 'Bookshelves saved successfully',
-      },
-      destroy: {
-        success: 'Bookshelves deleted successfully',
-      },
-      destroyAll: {
-        success: 'Bookshelves(s) deleted successfully',
-      },
-      edit: {
-        title: 'Edit Bookshelves',
-      },
-      fields: {
-        id: 'Id',
-        'bsBookName': 'BsBookName',
-        'bsSubjec': 'BsSubjec',
-        'bsBookOwner': 'BsBookOwner',
-        createdAt: 'Created at',
-        updatedAt: 'Updated at',
-        createdAtRange: 'Created at',
-      },
-      enumerators: {
-
-      },
-      new: {
-        title: 'New Bookshelves',
-      },
-      view: {
-        title: 'View Bookshelves',
-      },
-      importer: {
-        title: 'Import Bookshelves',
-        fileName: 'bookshelves_import_template',
-        hint:
-          'Files/Images columns must be the URLs of the files separated by space.',
-      },
-    },
   },
 
   auth: {
@@ -266,14 +216,6 @@ const en = {
     bookViewer: {
       label: 'Book Viewer',
       description: 'View access to Books',
-    },
-    bookshelvesEditor: {
-      label: 'Bookshelves Editor',
-      description: 'Edit access to Bookshelves',
-    },
-    bookshelvesViewer: {
-      label: 'Bookshelves Viewer',
-      description: 'View access to Bookshelves',
     },
   },
 

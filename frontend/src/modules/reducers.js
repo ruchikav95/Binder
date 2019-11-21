@@ -6,7 +6,6 @@ import auditLog from 'modules/auditLog/auditLogReducers';
 import settings from 'modules/settings/settingsReducers';
 import username from 'modules/username/usernameReducers';
 import book from 'modules/book/bookReducers';
-import bookshelves from 'modules/bookshelves/bookshelvesReducers';
 import { combineReducers } from 'redux';
 
 export default (history) =>
@@ -19,5 +18,4 @@ export default (history) =>
     settings,
     username,
     book,
-    bookshelves,
   });
