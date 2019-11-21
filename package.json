@@ -7,6 +7,7 @@
     "test": "nodemon --exec 'cross-env NODE_ENV=test mocha ./src/**/*.test.js --exit || exit 1'",
     "db:reset:localhost": "cross-env MIGRATION_ENV=localhost node ./migrations/reset",
     "db:reset:production": "cross-env MIGRATION_ENV=production node ./migrations/reset"
+
   },
   "dependencies": {
     "cors": "2.8.5",
@@ -27,13 +28,14 @@
   "engines": {
     "node": "8"
   },
-  #hello
+
+
   "private": true,
   "devDependencies": {
-    "cross-env": "6.0.3",
     "mocha": "6.2.2",
     "node-mocks-http": "1.8.0",
     "nodemon": "1.19.4",
-    "sequelize-cli": "5.5.1"
+    "sequelize-cli": "^5.5.1"
+
   }
 }

@@ -39,12 +39,12 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "test": "cross-env REACT_APP_ENVIRONMENT=testenv react-scripts test",
+    "test": " REACT_APP_ENVIRONMENT=testenv react-scripts test",
     "eject": "react-scripts eject",
     "start": "npm run start:localhost",
-    "start:localhost": "cross-env REACT_APP_ENVIRONMENT=localhost react-scripts start",
-    "build:production": "cross-env REACT_APP_ENVIRONMENT=production npm run build",
-    "start:production": "cross-env REACT_APP_ENVIRONMENT=production react-scripts start"
+    "start:localhost": " REACT_APP_ENVIRONMENT=localhost react-scripts start",
+    "build:production": " REACT_APP_ENVIRONMENT=production npm run build",
+    "start:production": " REACT_APP_ENVIRONMENT=production react-scripts start"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -56,7 +56,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "cross-env": "5.2.0",
     "@types/jest": "24.0.9",
     "less": "3.9.0"
   }
