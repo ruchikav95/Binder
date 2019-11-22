@@ -2,11 +2,11 @@
   "name": "app-backend",
   "description": "Backend",
   "scripts": {
-    "start": " NODE_ENV=localhost nodemon ./server.js",
-    "start:production": " NODE_ENV=production nodemon ./server.js",
-    "test": "nodemon --exec ' NODE_ENV=test mocha ./src/**/*.test.js --exit || exit 1'",
-    "db:reset:localhost": " MIGRATION_ENV=localhost node ./migrations/reset",
-    "db:reset:production": " MIGRATION_ENV=production node ./migrations/reset"
+    "start": "cross-env NODE_ENV=localhost nodemon ./server.js",
+    "start:production": "cross-env NODE_ENV=production nodemon ./server.js",
+    "test": "nodemon --exec 'cross-env NODE_ENV=test mocha ./src/**/*.test.js --exit || exit 1'",
+    "db:reset:localhost": "cross-env MIGRATION_ENV=localhost node ./migrations/reset",
+    "db:reset:production": "cross-env MIGRATION_ENV=production node ./migrations/reset"
   },
   "dependencies": {
     "cors": "2.8.5",
@@ -25,13 +25,14 @@
     "helmet": "3.21.2"
   },
   "engines": {
-    "node": "12.13.1"
+    "node": "8"
   },
   "private": true,
   "devDependencies": {
+    "cross-env": "6.0.3",
     "mocha": "6.2.2",
     "node-mocks-http": "1.8.0",
     "nodemon": "1.19.4",
-    "sequelize-cli": "^5.5.1"
+    "sequelize-cli": "5.5.1"
   }
 }

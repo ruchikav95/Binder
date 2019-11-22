@@ -65,7 +65,7 @@ class SigninPage extends Component {
           <Logo>
             {/* <h1>{i18n('app.title')}</h1> */}
             <h1>{i18n('Binder')}</h1>
-            <h2>{i18n('Sign-in')}</h2>
+
           </Logo>
 
           <Formik

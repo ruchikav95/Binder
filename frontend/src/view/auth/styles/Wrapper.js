@@ -8,14 +8,14 @@ const Wrapper = styled.div`
   justify-content: flex-end;
   align-items: center;
   position: relative;
-  background-size: cover;
+  background-size: contain;
 
   &:before {
     content: '';
     width: 100%;
     height: 100%;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
     position: absolute;
     z-index: 1;
     top: 0;
