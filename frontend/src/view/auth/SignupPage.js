@@ -66,7 +66,7 @@ class SignupPage extends Component {
       <SignupPageWrapper>
         <Content>
           <Logo>
-            <h1>{i18n('app.title')}</h1>
+            <h1>{i18n('Binder')}</h1>
           </Logo>
 
           <Formik
