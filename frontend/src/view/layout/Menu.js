@@ -93,7 +93,7 @@ class Menu extends Component {
         <Sider theme="light" trigger={null}>
           <div className="logo">
             <h2>
-              <Link to="/">{i18n('app.title')}</Link>
+              <Link to="/">{i18n('Binder')}</Link>
             </h2>
           </div>
 

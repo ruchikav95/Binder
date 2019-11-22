@@ -10,7 +10,9 @@ import HomeMixChartOne from 'view/home/HomeMixChartOne';
 import HomeHorizontalBarChart from 'view/home/HomeHorizontalBarChart';
 import HomePolarChart from 'view/home/HomePolarChart';
 import HomeLineChart from 'view/home/HomeLineChart';
-import BookListPage from 'view/book/list/BookListPage';
+// import BookViewList from 'view/book/view/BookViewList';
+// import ContentWrapper from 'view/layout/styles/ContentWrapper';
+// import BookView from 'view/book/view/BookView';
 class HomePage extends PureComponent {
   render() {
     const twoColumnsResponsiveProps = {
@@ -34,7 +36,10 @@ class HomePage extends PureComponent {
     return (
       
       <React.Fragment>
-        <BookListPage />
+        
+         {/* <BookViewList /> */}
+          
+      
         <Row gutter={24}>
           <Col {...threeColumnsResponsiveProps}>
             <Card bodyStyle={{ padding: 8 }}>
