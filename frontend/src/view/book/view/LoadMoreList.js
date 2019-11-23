@@ -1,12 +1,21 @@
-
 import React from 'react';
 // import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 // import './index.css';
+import BookListTable from '../../../view/book/list/BookListTable';
+import model from 'modules/book/bookModel';
+import UserListItem from 'view/iam/list/users/UserListItem';
 import { List, Avatar, Button, Skeleton } from 'antd';
-
 import reqwest from 'reqwest';
+const { fields } = model;
 
+
+let columns = [fields.bookName.forTable(),
+    fields.author.forTable(),
+    fields.subject.forTable(),
+    fields.bookOwner.forTable({
+        render: (value) => <UserListItem value={value} />,
+    })];
 const count = 3;
 const fakeDataUrl = `https://randomuser.me/api/?results=${count}&inc=name,gender,email,nat&noinfo`;
 
@@ -87,19 +96,17 @@ class LoadMoreList extends React.Component {
         loadMore={loadMore}
         dataSource={list}
         renderItem={item => (
-          <List.Item
-            actions={[<a key="list-loadmore-edit">edit</a>, <a key="list-loadmore-more">more</a>]}
-          >
+          <List.Item>
             <Skeleton avatar title={false} loading={item.loading} active>
               <List.Item.Meta
                 avatar={
                   <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
                 }
-                title={<a href="https://ant.design">{item.name.last}</a>}
-                description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+                title={<span>{item.name.last}</span>}
+                description="Ant Design, a design language for background applications, is refined by Ant UED Team AHAHAH"
               />
-              <div>content</div>
             </Skeleton>
+              <BookListTable/>
           </List.Item>
         )}
       />

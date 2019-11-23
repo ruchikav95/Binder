@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component, Fragment} from 'react';
 import Toolbar from 'view/shared/styles/Toolbar';
 import { Button, Tooltip, Popconfirm } from 'antd';
 import { connect } from 'react-redux';
@@ -29,15 +29,7 @@ class BookToolbar extends Component {
 
     const disabled = !hasRows || loading;
 
-    const button = (
-      <Button
-        disabled={disabled}
-        icon="file-excel"
-        onClick={this.doExport}
-        loading={exportLoading}
-      >
-        {i18n('common.export')}
-      </Button>
+    const button = (<React.Fragment></React.Fragment>
     );
 
     if (disabled) {
@@ -109,12 +101,7 @@ class BookToolbar extends Component {
           </Link>
         )}
 
-        {this.props.hasPermissionToImport && (
-          <Link to="/book/importer">
-            <Button type="primary" icon="upload">
-              {i18n('common.import')}
-            </Button>
-          </Link>
+        {this.props.hasPermissionToImport && (<React.Fragment></React.Fragment>
         )}
 
         {this.renderDestroyButton()}

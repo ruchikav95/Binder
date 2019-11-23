@@ -22,7 +22,6 @@ class BookListPage extends Component {
           <PageTitle>
             {i18n('entities.book.list.title')}
           </PageTitle>
-
           <BookListToolbar />
           <BookListFilter />
           <BookListTable />
