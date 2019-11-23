@@ -7,6 +7,7 @@ import { i18n } from 'i18n';
 import queryString from 'query-string';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import ImageLogo from './logo1.png';
 import { Link } from 'react-router-dom';
 import Content from 'view/auth/styles/Content';
 import Logo from 'view/auth/styles/Logo';
@@ -66,7 +67,7 @@ class SignupPage extends Component {
       <SignupPageWrapper>
         <Content>
           <Logo>
-            <h1>{i18n('Binder')}</h1>
+            <img src={ImageLogo} alt="" />
           </Logo>
 
           <Formik
