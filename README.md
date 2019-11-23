@@ -1,12 +1,24 @@
 # Binder
+Binder currently in its development phrase and is currently not deployed
 
-## Download and install
+## Overview
+Have extra books that you don't need? Why don't you trade it in!
+Introducing Binder, a book trading platform where many can trade in their books for another books of your liking.
 
-Make sure to delete node-modules and package-lock.json from root and frontend folders.
+## How we built it
+We built this project using MERN Stack (MySQL, Express, React/Redux, NodeJS).
 
-## Config db
-Change to the localhost sql server information
+## Challenges we ran into
+TBA
 
-## Run reset db 
+## What's next for Binder
+TBA
 
-### npm run db:reset:localhost
+## Technology Used
+
+* React/Redux
+* MySQL
+* ExpressJS
+* NodeJS
+* Ant Design
+* Sequelize
