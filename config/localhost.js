@@ -24,7 +24,7 @@ module.exports = {
   database: {
     username: 'root',
     dialect: 'mysql',
-    password: 'Rugiya2468642',
+    password: 'imthebest!95',
     database: 'binderDb2',
     host: 'localhost',
     logging: console.log,
@@ -67,6 +67,4 @@ module.exports = {
    */
   userAutoAuthenticatedEmailForTests:
     '<insert your email here>',
-
-
 };

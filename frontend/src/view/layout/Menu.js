@@ -6,12 +6,14 @@ import {
 import React, { Component } from 'react';
 import SiderWrapper from 'view/layout/styles/SiderWrapper';
 import { Link } from 'react-router-dom';
+import ImageLogo from 'view/auth/logo1.png';
 import authSelectors from 'modules/auth/authSelectors';
 import { connect } from 'react-redux';
 import PermissionChecker from 'modules/auth/permissionChecker';
 import actions from 'modules/layout/layoutActions';
 import layoutSelectors from 'modules/layout/layoutSelectors';
 import routes from 'view/routes';
+// eslint-disable-next-line
 import { i18n } from 'i18n';
 const { Sider } = AntLayout;
 
@@ -92,9 +94,14 @@ class Menu extends Component {
       >
         <Sider theme="light" trigger={null}>
           <div className="logo">
-            <h2>
-              <Link to="/">{i18n('Binder')}</Link>
-            </h2>
+            <img
+              src={ImageLogo}
+              alt="logo"
+              style={{
+                width: 100,
+                height: 100,
+              }}
+            />
           </div>
 
           <AntMenu

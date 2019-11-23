@@ -16,7 +16,7 @@ import InputFormItem, {
   InputFormItemNotFast,
 } from 'view/shared/form/items/InputFormItem';
 import FormSchema from 'view/shared/form/formSchema';
-
+import ImageLogo from './logo1.png';
 const { fields } = model;
 
 class SigninPage extends Component {
@@ -64,8 +64,8 @@ class SigninPage extends Component {
         <Content>
           <Logo>
             {/* <h1>{i18n('app.title')}</h1> */}
-            <h1>{i18n('Binder')}</h1>
 
+            <img src={ImageLogo} alt="" />
           </Logo>
 
           <Formik

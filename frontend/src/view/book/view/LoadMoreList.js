@@ -1,4 +1,3 @@
-
 import React from 'react';
 // import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
@@ -19,7 +18,7 @@ class LoadMoreList extends React.Component {
   };
 
   componentDidMount() {
-    this.getData(res => {
+    this.getData((res) => {
       this.setState({
         initLoading: false,
         data: res.results,
@@ -28,13 +27,13 @@ class LoadMoreList extends React.Component {
     });
   }
 
-  getData = callback => {
+  getData = (callback) => {
     reqwest({
       url: fakeDataUrl,
       type: 'json',
       method: 'get',
       contentType: 'application/json',
-      success: res => {
+      success: (res) => {
         callback(res);
       },
     });
@@ -43,9 +42,14 @@ class LoadMoreList extends React.Component {
   onLoadMore = () => {
     this.setState({
       loading: true,
-      list: this.state.data.concat([...new Array(count)].map(() => ({ loading: true, name: {} }))),
+      list: this.state.data.concat(
+        [...new Array(count)].map(() => ({
+          loading: true,
+          name: {},
+        })),
+      ),
     });
-    this.getData(res => {
+    this.getData((res) => {
       const data = this.state.data.concat(res.results);
       this.setState(
         {
@@ -75,7 +79,9 @@ class LoadMoreList extends React.Component {
             lineHeight: '32px',
           }}
         >
-          <Button onClick={this.onLoadMore}>loading more</Button>
+          <Button onClick={this.onLoadMore}>
+            loading more
+          </Button>
         </div>
       ) : null;
 
@@ -86,16 +92,30 @@ class LoadMoreList extends React.Component {
         itemLayout="horizontal"
         loadMore={loadMore}
         dataSource={list}
-        renderItem={item => (
+        renderItem={(item) => (
           <List.Item
-            actions={[<a key="list-loadmore-edit">edit</a>, <a key="list-loadmore-more">more</a>]}
+            actions={[
+              // eslint-disable-next-line
+              <a key="list-loadmore-edit">edit</a>,
+              // eslint-disable-next-line
+              <a key="list-loadmore-more">more</a>,
+            ]}
           >
-            <Skeleton avatar title={false} loading={item.loading} active>
+            <Skeleton
+              avatar
+              title={false}
+              loading={item.loading}
+              active
+            >
               <List.Item.Meta
                 avatar={
                   <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
                 }
-                title={<a href="https://ant.design">{item.name.last}</a>}
+                title={
+                  <a href="https://ant.design">
+                    {item.name.last}
+                  </a>
+                }
                 description="Ant Design, a design language for background applications, is refined by Ant UED Team"
               />
               <div>content</div>
