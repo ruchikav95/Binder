@@ -47,7 +47,7 @@ app.use('/api', routes);
 // to the root / of the server
 const frontendDir = path.join(
   __dirname,
-  '../../../frontend/build',
+  '../../frontend/build',
 );
 
 if (fs.existsSync(frontendDir)) {
