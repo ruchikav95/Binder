@@ -49,9 +49,9 @@ const frontendDir = path.join(
   __dirname,
   '../../frontend/build',
 );
-
+console.log(fs.existsSync(frontendDir));
 if (fs.existsSync(frontendDir)) {
-  app.use('/', express.static(frontendDir));
+  app.use(express.static(frontendDir));
 
   app.get('*', function(request, response) {
     response.sendFile(
