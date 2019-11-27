@@ -19,15 +19,13 @@ module.exports = {
    * More info: https://sequelize.org/v5/manual/getting-started.html#setting-up-a-connection
    */
   database: {
-    use_env_variable: "JAWSDB_MARIA_URL",
-    dialect: "mysql"
-    // username: 'root',
-    // dialect: 'mysql',
-    // password: '',
-    // database: 'production',
-    // host:
-    //   '<insert public ip here>',
-    // logging: console.log,
+    use_env_variable: 'JAWSDB_MARIA_URL',
+    dialect: 'mysql',
+    username: 'tw4bjjgdss6thjh5',
+    password: 'gnygrqlnks1hvgfx',
+    database: 'y4jldjwacrqg118b',
+    host:
+      'lolyz0ok3stvj6f0.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
   },
 
   /**
@@ -61,6 +59,4 @@ module.exports = {
    * Client URL used when sending emails.
    */
   clientUrl: '<insert client url here>',
-
-
 };
