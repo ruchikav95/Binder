@@ -45,7 +45,7 @@ app.use('/api', routes);
 
 // Exposes the build of the frontend
 // to the root / of the server
-const frontendDir = path.join(__dirname, 'client/build');
+const frontendDir = path.join(__dirname, 'frontend/build');
 console.log(fs.existsSync(frontendDir));
 if (fs.existsSync(frontendDir)) {
   app.use(express.static(frontendDir));
