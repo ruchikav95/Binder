@@ -14,7 +14,7 @@ import actions from 'modules/layout/layoutActions';
 import layoutSelectors from 'modules/layout/layoutSelectors';
 import routes from 'view/routes';
 // eslint-disable-next-line
-import { i18n } from 'i18n';
+// import { i18n } from 'i18n';
 const { Sider } = AntLayout;
 
 class Menu extends Component {
