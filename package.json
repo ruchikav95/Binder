@@ -6,6 +6,7 @@
     "start:prod": "cd frontend && npm run build && cd .. && node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'frontend/*'\" \"npm run frontend\"",
     "client": "cd frontend && npm start",
+    "install": "npm install && cd frontend && npm install",
     "test": "nodemon --exec 'cross-env NODE_ENV=test mocha ./src/**/*.test.js --exit || exit 1'",
     "db:reset:localhost": "cross-env MIGRATION_ENV=localhost node ./migrations/reset",
     "db:reset:production": "cross-env MIGRATION_ENV=production node ./migrations/reset"
