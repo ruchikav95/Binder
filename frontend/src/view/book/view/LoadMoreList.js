@@ -2,9 +2,10 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 // import './index.css';
-import { List, Avatar, Button, Skeleton } from 'antd';
+import { List, Avatar, Button, Skeleton, Input } from 'antd';
 
 import reqwest from 'reqwest';
+const { Search } = Input;
 
 const count = 3;
 const fakeDataUrl = `https://randomuser.me/api/?results=${count}&inc=name,gender,email,nat&noinfo`;
@@ -68,6 +69,7 @@ class LoadMoreList extends React.Component {
   };
 
   render() {
+   
     const { initLoading, loading, list } = this.state;
     const loadMore =
       !initLoading && !loading ? (
@@ -86,6 +88,12 @@ class LoadMoreList extends React.Component {
       ) : null;
 
     return (
+      <Search
+      placeholder="input search text"
+      onSearch={value => console.log(value)}
+      style={{ width: 200 }}
+    />
+    <br />
       <List
         className="demo-loadmore-list"
         loading={initLoading}
