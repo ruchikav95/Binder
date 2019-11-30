@@ -1,0 +1,4 @@
+node_modules/
+# /service-accounts/*.json
+# /data
+node_modules

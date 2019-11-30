@@ -1,12 +1,20 @@
+import App from 'App';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { unregister } from 'registerServiceWorker';
+import SettingsService from 'modules/settings/settingsService';
+import { i18n } from 'i18n';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+(async function() {
+  document.title = i18n('Binder');
+  await SettingsService.fetchAndApply();
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+  ReactDOM.render(<App />, document.getElementById('root'));
+
+  /**
+   * It may cause cache issues when developing, so, after your app is ready,
+   * change those lines
+   */
+  unregister();
+  // registerServiceWorker();
+})();

@@ -1,21 +1,11 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 5000;
-const path = require('path');
-//Route setup
-app.get('/', (req, res) => {    res.send('root route');
-})
+/**
+ * Starts the application on the port specified.
+ */
 
-//Static file declaration
-app.use(express.static(path.join(__dirname, 'client/build')));
-//production mode
-if(process.env.NODE_ENV === 'production') {  
-     app.use(express.static(path.join(__dirname, 'client/build')));  
-       app.get('*', (req, res) => {    
-           res.sendfile(path.join(__dirname = 'client/build/index.html')); 
-         })
-        }
-       //start server
-       app.listen(port, (req, res) => {  
-           console.log( `server listening on port: ${port}`);
-        })
+const api = require('./src/api');
+
+const PORT = process.env.PORT || 8080;
+
+api.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}`);
+});
