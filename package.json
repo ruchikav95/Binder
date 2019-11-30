@@ -2,9 +2,9 @@
   "name": "app-backend",
   "description": "Backend",
   "scripts": {
-    "start": "NODE_ENV=localhost nodemon ./server.js",
-    "start:production": "NODE_ENV=production nodemon ./server.js",
-    "test": "nodemon --exec 'NODE_ENV=test mocha ./src/**/*.test.js --exit || exit 1'",
+    "start": "NODE_ENV=localhost node ./server.js",
+    "start:production": "NODE_ENV=production node ./server.js",
+    "test": "node --exec 'NODE_ENV=test mocha ./src/**/*.test.js --exit || exit 1'",
     "db:reset:localhost": "MIGRATION_ENV=localhost node ./migrations/reset",
     "db:reset:production": "MIGRATION_ENV=production node ./migrations/reset",
     "heroku-postbuild": "cd client && npm install && npm run build"
