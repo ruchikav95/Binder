@@ -19,8 +19,10 @@ module.exports = {
    * More info: https://sequelize.org/v5/manual/getting-started.html#setting-up-a-connection
    */
   database: {
-    use_env_variable: "JAWSDB_MARIA_URL",
-    dialect: "mysql"
+    production: {
+      use_env_variable: "JAWSDB_URL",
+      dialect: "mysql"
+    }
     // username: 'root',
     // dialect: 'mysql',
     // password: '',
