@@ -22,14 +22,12 @@ module.exports = {
    */
 
   database: {
-    use_env_variable: "JAWSDB_URL",
-    dialect: "mysql"
-    // username: 'root',
-    // dialect: 'mysql',
-    // password: 'Itapeva1998',
-    // database: 'binderDb2',
-    // host: 'localhost',
-    // logging: console.log,
+    username: 'root',
+    dialect: 'mysql',
+    password: '',
+    database: 'binderDb2',
+    host: 'localhost',
+    logging: console.log,
   },
 
   /**
