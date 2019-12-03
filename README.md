@@ -1,24 +1,26 @@
-# Binder
-Binder currently in its development phrase and is currently not deployed
+## Concept
+Binder is a platform for students to share textbooks, notes and study material with other students. 
 
-## Overview
-Have extra books that you don't need? Why don't you trade it in!
-Introducing Binder, a book trading platform where many can trade in their books for another books of your liking.
+## Motivation
+* Rising textbook prices make it difficult for students to afford to buy textbooks.
+* Students are becoming environmentally conscious. Participating in a book exchanges saves on ink and leaves a smaller environmental footprint than printing a book.
 
 ## How we built it
 We built this project using MERN Stack (MySQL, Express, React/Redux, NodeJS).
 
-## Challenges we ran into
-TBA
-
-## What's next for Binder
-TBA
-
 ## Technology Used
-
-* React/Redux
+* React
+* Bootstrap
+* Node.js
+* Express
 * MySQL
-* ExpressJS
-* NodeJS
-* Ant Design
 * Sequelize
+* React-Redux
+* Ant Design
+* Bcrypt
+* Moment
+
+## Built By
+Orlando || Ruchika || Rugiya || Sam 
+
+
