@@ -45,14 +45,19 @@ app.use('/api', routes);
 
 // Exposes the build of the frontend
 // to the root / of the server
-const frontendDir = path.join(__dirname, 'frontend/build');
-console.log(fs.existsSync(frontendDir));
-if (fs.existsSync(frontendDir)) {
-  app.use(express.static(frontendDir));
+
+const clientDir = path.join(
+  __dirname,
+  '../../../client/public',
+);
+
+if (fs.existsSync(clientDir)) {
+  app.use('/', express.static(clientDir));
+
 
   app.get('*', function(request, response) {
     response.sendFile(
-      path.resolve(frontendDir, 'index.html'),
+      path.resolve(clientDir, 'index.html'),
     );
   });
 }

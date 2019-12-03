@@ -1,0 +1,55 @@
+[debug] [2019-12-01T01:59:47.315Z] ----------------------------------------------------------------------
+[debug] [2019-12-01T01:59:47.316Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2019-12-01T01:59:47.316Z] CLI Version:   7.8.1
+[debug] [2019-12-01T01:59:47.316Z] Platform:      darwin
+[debug] [2019-12-01T01:59:47.316Z] Node Version:  v12.13.0
+[debug] [2019-12-01T01:59:47.317Z] Time:          Sat Nov 30 2019 20:59:47 GMT-0500 (Eastern Standard Time)
+[debug] [2019-12-01T01:59:47.317Z] ----------------------------------------------------------------------
+[debug] [2019-12-01T01:59:47.317Z] 
+[debug] [2019-12-01T01:59:47.322Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-01T01:59:47.323Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/orlandobuzana/Harvard_Projects/git_pages/react-apps/YetAnotherTemp
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2019-12-01T02:00:01.080Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-12-01T02:00:01.081Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-12-01T02:00:01.280Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-01T02:00:01.296Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=100  
+ 
+[debug] [2019-12-01T02:00:01.645Z] <<< HTTP RESPONSE 200
+[info] i  Using project radiant-fire-6641 (OrlandoBuzanaPortfolio)
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2019-12-01T02:00:32.924Z] >>> HTTP REQUEST GET https://www.gstatic.com/firebasejs/releases.json  
+ 
+[debug] [2019-12-01T02:00:33.057Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-01T02:00:33.179Z] Error: ENOTDIR: not a directory, open '/Users/orlandobuzana/Harvard_Projects/git_pages/react-apps/YetAnotherTemp/client/build/index.html/index.html'
+    at Object.openSync (fs.js:440:3)
+    at Object.writeFileSync (fs.js:1265:35)
+    at Object.createFileSync (/usr/local/lib/node_modules/firebase-tools/node_modules/fs-extra/lib/ensure/file.js:34:6)
+    at Config.writeProjectFile (/usr/local/lib/node_modules/firebase-tools/lib/config.js:178:8)
+    at /usr/local/lib/node_modules/firebase-tools/lib/config.js:197:18
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[error] 
+[error] Error: An unexpected error has occurred.

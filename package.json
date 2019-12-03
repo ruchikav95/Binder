@@ -2,17 +2,18 @@
   "name": "app-backend",
   "description": "Backend",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'frontend/*'\" \"npm run frontend\"",
-    "client": "cd frontend && npm run start",
-    "heroku-postbuild": "cd frontend && npm install && npm run build",
-    "test": "nodemon --exec 'cross-env NODE_ENV=test mocha ./src/**/*.test.js --exit || exit 1'",
-    "db:reset:localhost": "cross-env MIGRATION_ENV=localhost node ./migrations/reset",
-    "db:reset:production": "cross-env MIGRATION_ENV=production node ./migrations/reset"
+
+    "start": "NODE_ENV=localhost node ./server.js",
+    "start:production": "NODE_ENV=production node ./server.js",
+    "test": "node --exec 'NODE_ENV=test mocha ./src/**/*.test.js --exit || exit 1'",
+    "db:reset:localhost": "MIGRATION_ENV=localhost node ./migrations/reset",
+    "db:reset:production": "MIGRATION_ENV=production node ./migrations/reset",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
-    "bcrypt": "3.0.6",
+    "if-env": "^1.0.4",
+    "concurrently": "^4.1.0",
+
     "cors": "2.8.5",
     "express": "4.17.1",
     "formidable": "1.2.1",
@@ -29,11 +30,13 @@
     "sqlite": "3.0.3"
   },
   "engines": {
-    "node": "8"
+    "node": "12"
   },
   "private": true,
   "devDependencies": {
-    "concurrently": "^5.0.0",
+
+    "dotenv": "^6.2.0",
+
     "cross-env": "6.0.3",
     "mocha": "6.2.2",
     "node-mocks-http": "1.8.0",
