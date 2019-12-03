@@ -1,5 +1,5 @@
-## Binder 
-# Stop Buying | Start Sharing
+# Binder 
+## Stop Buying | Start Sharing
 
 ## Concept
 Binder is a platform for students to share textbooks, notes and study material with other students. 
