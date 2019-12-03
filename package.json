@@ -2,13 +2,16 @@
   "name": "app-backend",
   "description": "Backend",
   "scripts": {
-    "start": "cross-env NODE_ENV=localhost nodemon ./server.js",
-    "start:production": "cross-env NODE_ENV=production nodemon ./server.js",
-    "test": "nodemon --exec 'cross-env NODE_ENV=test mocha ./src/**/*.test.js --exit || exit 1'",
-    "db:reset:localhost": "cross-env MIGRATION_ENV=localhost node ./migrations/reset",
-    "db:reset:production": "cross-env MIGRATION_ENV=production node ./migrations/reset"
+    "start": "NODE_ENV=localhost node ./server.js",
+    "start:production": "NODE_ENV=production node ./server.js",
+    "test": "node --exec 'NODE_ENV=test mocha ./src/**/*.test.js --exit || exit 1'",
+    "db:reset:localhost": "MIGRATION_ENV=localhost node ./migrations/reset",
+    "db:reset:production": "MIGRATION_ENV=production node ./migrations/reset",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
+    "if-env": "^1.0.4",
+    "concurrently": "^4.1.0",
     "cors": "2.8.5",
     "express": "4.17.1",
     "lodash": "4.17.15",
@@ -25,10 +28,11 @@
     "helmet": "3.21.2"
   },
   "engines": {
-    "node": "8"
+    "node": "12"
   },
   "private": true,
   "devDependencies": {
+    "dotenv": "^6.2.0",
     "cross-env": "6.0.3",
     "mocha": "6.2.2",
     "node-mocks-http": "1.8.0",
