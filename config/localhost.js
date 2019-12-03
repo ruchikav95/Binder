@@ -25,8 +25,8 @@ module.exports = {
     username: 'root',
     dialect: 'mysql',
     password: '',
-    database: 'binderDb2',
-    host: 'localhost',
+    database: '',
+    host: '',
     logging: console.log,
   },
 
