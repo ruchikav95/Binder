@@ -12,12 +12,13 @@ We built this project using MERN Stack (MySQL, Express, React/Redux, NodeJS).
 
 ## Technology & Packages
 * React
+* Redux
+* React-Redux
 * Bootstrap
 * Node.js
 * Express
 * MySQL
 * Sequelize
-* React-Redux
 * Ant Design
 * Bcrypt
 * Moment
