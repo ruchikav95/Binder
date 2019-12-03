@@ -10,7 +10,7 @@ Binder is a platform for students to share textbooks, notes and study material w
 ## How we built it
 We built this project using MERN Stack (MySQL, Express, React/Redux, NodeJS).
 
-## Technology Used
+## Technology & Packages
 * React
 * Bootstrap
 * Node.js
