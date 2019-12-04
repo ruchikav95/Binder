@@ -2,3 +2,5 @@ node_modules/
 # /service-accounts/*.json
 # /data
 node_modules
+/package-lock
+package-lock
