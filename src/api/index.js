@@ -48,16 +48,16 @@ app.use('/api', routes);
 
 const clientDir = path.join(
   __dirname,
-  '../../../client/public',
+  '../../client/build'
 );
 
+console.log("clientDir:", clientDir, fs.existsSync(clientDir));
 if (fs.existsSync(clientDir)) {
   app.use('/', express.static(clientDir));
 
-
   app.get('*', function(request, response) {
     response.sendFile(
-      path.resolve(clientDir, 'index.html'),
+      path.resolve(clientDir, 'index.html')
     );
   });
 }

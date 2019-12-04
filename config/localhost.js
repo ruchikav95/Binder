@@ -22,11 +22,11 @@ module.exports = {
    */
 
   database: {
-    username: 'root',
+    username: 'w7zf0q5vtrdx29r5',
     dialect: 'mysql',
-    password: 'Itapeva1998',
-    database: 'binderDb2',
-    host: 'localhost',
+    password: 'nb84nmw0buhc2a4u',
+    database: 'e9l82rm4qoqc0tq9',
+    host: 'kf3k4aywsrp0d2is.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
     logging: console.log,
   },
 
