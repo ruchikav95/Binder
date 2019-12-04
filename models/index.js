@@ -1,5 +1,5 @@
 'use strict';
-
+//defining models using process_env 
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
