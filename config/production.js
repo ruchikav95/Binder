@@ -19,6 +19,7 @@ module.exports = {
    * More info: https://sequelize.org/v5/manual/getting-started.html#setting-up-a-connection
    */
   database: {
+
     production: {
       use_env_variable: "JAWSDB_URL",
       dialect: "mysql"
@@ -30,6 +31,7 @@ module.exports = {
     // host:
     //   '<insert public ip here>',
     // logging: console.log,
+
   },
 
   /**
@@ -63,6 +65,4 @@ module.exports = {
    * Client URL used when sending emails.
    */
   clientUrl: '<insert client url here>',
-
-
 };
