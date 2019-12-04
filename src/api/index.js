@@ -47,12 +47,12 @@ app.use('/api', routes);
 // to the root / of the server
 const clientDir = path.join(
   __dirname,
-  '../../../client/public',
+  '../../client/build',
 );
 
 if (fs.existsSync(clientDir)) {
   app.use('/', express.static(clientDir));
-
+  console.log("hello");
   app.get('*', function(request, response) {
     response.sendFile(
       path.resolve(clientDir, 'index.html'),
