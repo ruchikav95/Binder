@@ -26,6 +26,7 @@ We built this project using MERN Stack (MySQL, Express, React/Redux, NodeJS).
 ## Starting the App Locally
 * Start by installing front and backend dependencies. Run the following commands within the binder folder and the frontend folder:
 
+
 ### Configuration
 * Open config/localhost.js - Set your custom configs
 * Open frontend/src/config/localhost.js - Set your custom configs
@@ -41,4 +42,5 @@ We built this project using MERN Stack (MySQL, Express, React/Redux, NodeJS).
 
 ## Built By
 Orlando || Ruchika || Rugiya || Sam 
+
 
