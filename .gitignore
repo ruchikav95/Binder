@@ -1,2 +1,6 @@
+node_modules/
+# /service-accounts/*.json
+# /data
 node_modules
-.DS_Store
+/package-lock
+package-lock
