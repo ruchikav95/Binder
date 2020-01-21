@@ -40,6 +40,6 @@ We built this project using MERN Stack (MySQL, Express, React/Redux, NodeJS).
 * After completing the above step, run npm start. Your app should now be running on http://localhost:8080.
 
 ## Built By
-Orlando || Ruchika || Rugiya || Sam 
+Orlando || Ruchika || Rugiyya || Sam 
 
 
