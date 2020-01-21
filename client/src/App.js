@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+import React, { Component } from "react";
+import Navbar from "./components/Navbar";
+import WrappedRegistrationForm from "./components/Form"
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Navbar />
+        <WrappedRegistrationForm />
+      </React.Fragment>
+=======
 import { ConnectedRouter } from 'connected-react-router';
 import { configureStore, getHistory } from 'modules/store';
 import React, { Component } from 'react';
@@ -18,6 +30,7 @@ export default class App extends Component {
           </ConnectedRouter>
         </Provider>
       </LocaleProvider>
+>>>>>>> 2a09b523d5cda976f5ef8bb31f74ea05389f0f6b
     );
   }
 }

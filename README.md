@@ -12,7 +12,7 @@ Binder is a platform for students to share textbooks, notes and study material w
 We built this project using MERN Stack (MySQL, Express, React/Redux, NodeJS).
 
 ## Technology & Packages
-* React
+* React.js
 * Redux
 * React-Redux
 * Bootstrap
@@ -40,6 +40,6 @@ We built this project using MERN Stack (MySQL, Express, React/Redux, NodeJS).
 * After completing the above step, run npm start. Your app should now be running on http://localhost:8080.
 
 ## Built By
-Orlando || Ruchika || Rugiya || Sam 
+Orlando || Ruchika || Rugiyya || Sam 
 
 
